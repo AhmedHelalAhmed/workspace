@@ -53,6 +53,9 @@
         ],
         "lint": [
             "vendor/bin/parallel-lint app/ config/ database/ bootstrap/"
+        ],
+        "cs-fix": [
+            "vendor/bin/pint"
         ]
     },
     "extra": {

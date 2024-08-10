@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Variable extends Model
 {
     use HasFactory;
-    protected $fillable=[
-      'key',
-      'value',
-      'note'
+
+    protected $fillable = [
+        'key',
+        'value',
+        'note',
     ];
 }
