@@ -68,8 +68,8 @@
             "vendor/bin/pint"
         ],
         "phpmd": [
-            "vendor/bin/phpmd app/,routes/,tests/ text cleancode,codesize,controversial,design,naming,unusedcode --reportfile phpmmd_report.txt || true",
-            "grep -v 'StaticAccess' phpmmd_report.txt > filtered_report.txt"
+            "vendor/bin/phpmd app/,routes/,tests/ text cleancode,codesize,controversial,design,naming,unusedcode --reportfile phpmd_report.txt || true",
+            "grep -v 'StaticAccess' phpmd_report.txt > filtered_report.txt"
         ]
     },
     "extra": {
