@@ -30,7 +30,8 @@ class SyncGistsFromGithubJob implements ShouldQueue
         do {
             // Make the request to GitHub
             $response = Http::get(
-                $url, [
+                $url,
+                [
                     'page' => $page,
                     'headers' => [
                         'Authorization' => 'token '.config('github.token'),
@@ -45,14 +46,14 @@ class SyncGistsFromGithubJob implements ShouldQueue
                 Gist::query()->firstOrCreate(
                     [
                         'link' => $gist['html_url'],
-                    ], [
+                    ],
+                    [
                         'title' => $gist['description'],
                     ]
                 );
             }
 
             $page++;
-
         } while ($gists);
     }
 }

@@ -15,6 +15,7 @@
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.1",
         "fakerphp/faker": "^1.23",
+        "friendsofphp/php-cs-fixer": "^3.62",
         "larastan/larastan": "^2.0",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.26",
@@ -61,6 +62,7 @@
         "cs-fix": [
             "vendor/bin/phpcs --standard=PSR12 app/ routes/ database/ tests/ config/ -d memory_limit=8G || true",
             "vendor/bin/phpcbf app/ routes/ tests/ config/ || true",
+            "vendor/bin/php-cs-fixer fix",
             "vendor/bin/pint"
         ],
         "phpstan": [

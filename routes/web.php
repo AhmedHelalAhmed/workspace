@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return redirect()->to('/dashboard');
-});
+Route::get(
+    '/',
+    function () {
+        return redirect()->to('/dashboard');
+    }
+);
