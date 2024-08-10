@@ -14,6 +14,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
+        "larastan/larastan": "^2.0",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6",
@@ -56,6 +57,9 @@
         ],
         "cs-fix": [
             "vendor/bin/pint"
+        ],
+        "phpstan": [
+            "vendor/bin/phpstan analyse --memory-limit=-1"
         ]
     },
     "extra": {
