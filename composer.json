@@ -23,7 +23,8 @@
         "php-parallel-lint/php-console-highlighter": "^1.0",
         "php-parallel-lint/php-parallel-lint": "^1.4",
         "phpmd/phpmd": "@stable",
-        "phpunit/phpunit": "^11.0.1"
+        "phpunit/phpunit": "^11.0.1",
+        "squizlabs/php_codesniffer": "*"
     },
     "autoload": {
         "psr-4": {
@@ -58,6 +59,8 @@
             "vendor/bin/parallel-lint app/ config/ database/ bootstrap/"
         ],
         "cs-fix": [
+            "vendor/bin/phpcs --standard=PSR12 app/ routes/ database/ tests/ config/ -d memory_limit=8G || true",
+            "vendor/bin/phpcbf app/ routes/ tests/ config/ || true",
             "vendor/bin/pint"
         ],
         "phpstan": [
