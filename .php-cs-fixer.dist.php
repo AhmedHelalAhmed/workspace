@@ -4,11 +4,7 @@ use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
 $finder = Finder::create()
-    ->in(__DIR__)
-    ->in(__DIR__.'/app')      // You can specify multiple directories
-    ->in(__DIR__.'/database')
-    ->in(__DIR__.'/config')
-    ->in(__DIR__.'/tests')
+    ->in(__DIR__)      // You can specify multiple directories
     ->name('*.php')              // Only fix PHP files
     ->notName('*.blade.php')     // Exclude Blade template files
     ->exclude('vendor')          // Exclude the vendor directory
@@ -34,7 +30,7 @@ return $config
         ],
         // 'cast_spaces' => true,
         // 'class_definition' => array('singleLine' => true),
-        'concat_space' => ['spacing' => 'none'],
+        'concat_space' => false,
         'declare_equal_normalize' => true,
         'function_typehint_space' => true,
         'single_line_comment_style' => true,
@@ -101,6 +97,7 @@ return $config
         'no_spaces_after_function_name' => true,
         'no_spaces_inside_parenthesis' => true,
         'not_operator_with_successor_space' => true,
+        'single_trait_insert_per_statement' => true,
     ])
     ->setLineEnding("\n")
     ->setFinder($finder);
