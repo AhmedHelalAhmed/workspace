@@ -69,7 +69,7 @@
         ],
         "phpmd": [
             "vendor/bin/phpmd app/,routes/,tests/ text cleancode,codesize,controversial,design,naming,unusedcode --reportfile phpmd_report.txt || true",
-            "grep -v 'StaticAccess' phpmd_report.txt > filtered_report.txt"
+            "grep -v 'StaticAccess' phpmd_report.txt > phpmd_filtered_report.txt"
         ]
     },
     "extra": {
