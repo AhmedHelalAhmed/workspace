@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Http;
 
 class ActionsWidget extends Widget
 {
-    protected static string $view = 'filament.widgets.invoice';
+    protected static string $view = 'filament.widgets.actions';
 
     protected int|string|array $columnSpan = 2;
 
