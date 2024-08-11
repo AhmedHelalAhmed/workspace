@@ -43,7 +43,7 @@ class SyncGistsFromGithubJob implements ShouldQueue
             $gists = $response->json();
 
             foreach ($gists as $gist) {
-                Gist::query()->firstOrCreate(
+                Gist::query()->updateOrCreate(
                     [
                         'link' => $gist['html_url'],
                     ],
