@@ -123,4 +123,5 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'DotenvEditor' => Brotzka\DotenvEditor\DotenvEditorFacade::class,
 ];
