@@ -21,7 +21,7 @@ class GistResource extends Resource
         return $form
             ->schema(
                 [
-                    TextInput::make('title'),
+                    TextInput::make('description'),
                     TextInput::make('link'),
                 ]
             );
@@ -32,7 +32,7 @@ class GistResource extends Resource
         return $table
             ->columns(
                 [
-                    Tables\Columns\TextColumn::make('title')->searchable(),
+                    Tables\Columns\TextColumn::make('description')->searchable(),
                 ]
             )
             ->filters(

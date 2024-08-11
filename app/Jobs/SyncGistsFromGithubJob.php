@@ -48,7 +48,7 @@ class SyncGistsFromGithubJob implements ShouldQueue
                         'link' => $gist['html_url'],
                     ],
                     [
-                        'title' => $gist['description'],
+                        'description' => $gist['description'],
                     ]
                 );
             }
