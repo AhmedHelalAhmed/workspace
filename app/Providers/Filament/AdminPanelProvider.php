@@ -71,7 +71,8 @@ class AdminPanelProvider extends PanelProvider
                 [
                     NavigationItem::make('Edit Dot env')
                         ->url('/admin/env', shouldOpenInNewTab: true)
-                        ->icon('heroicon-o-link'),
+                        ->icon('heroicon-o-link')
+                        ->sort(100),
                 ]
             );
     }
