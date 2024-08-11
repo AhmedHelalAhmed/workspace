@@ -5,20 +5,17 @@ namespace App\Filament\Pages;
 use App\Filament\Components\CopyableReadOnlyTextInput;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Pages\Page;
 use Illuminate\Support\Str;
 
 class NameFixer extends Page implements HasForms
 {
-    use InteractsWithForms;
-
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
     protected static string $view = 'filament.pages.name-fixer';
 
-    public string $name;
+    public string $inputName;
 
     public string $camelcase;
 
@@ -65,7 +62,7 @@ class NameFixer extends Page implements HasForms
 
     public function submit(): void
     {
-        $name = str_replace($this->find ?? '', $this->replace ?? '', $this->name);
+        $name = str_replace($this->find ?? '', $this->replace ?? '', $this->inputName);
         $this->lowercase = Str::lower($name);
         $this->uppercase = Str::upper($name);
         $this->camelcase = Str::camel($name);
