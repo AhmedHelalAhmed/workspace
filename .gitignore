@@ -23,3 +23,4 @@ _ide_helper.php
 phpmd_filtered_report.txt
 phpmd_report.txt
 .php-cs-fixer.cache
+.env.testing
