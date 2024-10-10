@@ -36,7 +36,7 @@ class NameFixer extends Page implements HasForms
     protected function getFormSchema(): array
     {
         return [
-            TextInput::make('inputName'),
+            TextInput::make('inputName')->required(),
             TextInput::make('find'),
             TextInput::make('replace'),
             Grid::make()
