@@ -20,6 +20,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Gist whereLink($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Gist whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Gist whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gist whereDescription($value)
  *
  * @mixin \Eloquent
  */
