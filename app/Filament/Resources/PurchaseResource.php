@@ -72,17 +72,19 @@ class PurchaseResource extends Resource
                                         }
                                     ),
                                 Forms\Components\TextInput::make('price')
-                                    ->required(),
+                                    ->required()
+                                    ->live()
+                                    ->numeric(),
                                 Forms\Components\TextInput::make('amount')
-                                    ->required(),
+                                    ->required()
+                                    ->live()
+                                    ->numeric(),
                                 Forms\Components\Textarea::make('notes')
                                     ->rows(10)
                                     ->cols(20)
                                     ->autosize(),
                             ]
                         )
-                        ->live()
-                        ->lazy()
                         ->afterStateUpdated(
                             function (Get $get, Set $set) {
                                 self::updateTotals($get, $set);
