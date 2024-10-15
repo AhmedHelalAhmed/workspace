@@ -65,6 +65,11 @@ class PurchaseResource extends Resource
                                                 ->required(),
                                             Forms\Components\RichEditor::make('notes'),
                                         ]
+                                    )
+                                    ->createOptionUsing(
+                                        function (array $data) {
+                                            return Product::create($data);
+                                        }
                                     ),
                                 Forms\Components\TextInput::make('price')
                                     ->required(),
